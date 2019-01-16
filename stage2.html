@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="css/image-grid.css">
+    <script src="js/location.js"></script>
+    <script src="database/stage2.js"></script>
+    <script src="js/imageStuff.js"></script>
+    <title>Stage 2</title>
+</head>
+<body>
+<div id="overlay" class="overlay">
+    <div class="loader"></div>
+</div>
+<div id="imageOverlay" onclick="closeImageOverlay()" class="overlay">
+    <img id="overlayImage" src="">
+    <a id="locationChecker" class="btn btn-primary">Check locatie</a>
+</div>
+<h1>The great search: stage2</h1>
+<p><strong>Instructies: </strong> Kijk goed naar de afbeeldingen: aan elk kruispunt moet je de richting volgen van 1 van de afbeeldingen die je ziet.
+Je kan ook hier weer de afbeeldingen uitvergroten en dient voor elke kruispunt te checken of je op de juiste locatie bent.
+    Als er geen herkenningspunt te zien is op een kruispunt, blijf je rechtdoor gaan. Opgelet: soms moet je best ver kijken!</p>
+
+<div class="grid-container" id="imageGrid">
+</div>
+
+<div id="completedStage">
+    <a class="btn btn-primary" href="stage3.html">Ga naar fase 3</a>
+</div>
+<script>
+
+</script>
+</body>
+</html>

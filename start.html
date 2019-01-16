@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/spinner.css">
+    <script src="js/location.js"></script>
+
+
+</head>
+<body>
+
+<div id="overlay"  class="overlay">
+    <div class="loader"></div>
+</div>
+
+<h1>The great search</h1>
+<h2>Vind de <span id="stoom">stoom</span>!</h2>
+<div id="damp" style="display:none;"><img src="images/startpoint.jpg" width="20%" height="20%">
+
+<a onclick="checkDamp()" class="btn btn-primary">Check locatie</a>
+
+    <div id="atDamp" style="display:none; color: green;">Succes! <a href="stage1.html" class="btn btn-primary">Go to next stage</a> </div>
+    <div id="notAtDamp" style="display:none; color: red;">Je bevind je niet op de jusite locatie!</div>
+</div>
+
+<script>
+
+
+document.getElementById("stoom").addEventListener("click",showStoom);
+
+function showStoom(){
+document.getElementById("damp").style.display = "block";
+}
+
+function checkDamp(){
+atLocation(51.182,3.575, areWeAtDamp);
+}
+
+function areWeAtDamp(weAre){
+if(weAre){
+document.getElementById("notAtDamp").style.display = "none";
+document.getElementById("atDamp").style.display = "block";
+} else {
+document.getElementById("notAtDamp").style.display = "block";
+}
+}
+</script>
+</body>
+</html> 
