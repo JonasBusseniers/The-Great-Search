@@ -6,7 +6,7 @@ var atPosition;
 
 
 function atLocation(lat, long, nxtFunc){
- atLocationWithRadius(lat, long, 0.05, nxtFunc);
+ atLocationWithRadius(lat, long, 0.0002, nxtFunc);
 
 }
 
