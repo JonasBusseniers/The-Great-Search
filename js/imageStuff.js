@@ -19,7 +19,7 @@ imageGrid.appendChild(divNode);
 function enlargeImage(i){
 var location = locations[i];
 document.getElementById("overlayImage").src = location.image;
-document.getElementById("locationChecker").setAttribute("onclick","checkImageLocation(" + i + ")");
+document.getElementById("locationChecker").setAttribute("onclick","checkImageLocation(" + i + ",event)");
 document.getElementById("locationChecker").style.display = "block";
 document.getElementById("imageOverlay").style.display = "block";
 }
@@ -28,7 +28,7 @@ function closeImageOverlay(){
 document.getElementById("imageOverlay").style.display = "none";
 }
 
-function checkImageLocation(i){
+function checkImageLocation(i, event){
 event.stopPropagation();
 var location = locations[i];
 checkingLocationIndex = i;
