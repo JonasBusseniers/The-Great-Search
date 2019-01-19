@@ -8,6 +8,9 @@ var location = locations[i];
 var divNode = document.createElement("div");
 var imgNode = document.createElement("img");
 divNode.id = location.id;
+if(location.found){
+divNode.style.borderColor = "lime";
+}
 imgNode.setAttribute("onclick","enlargeImage(" + i + ")");
 imgNode.className  = "template";
 imgNode.src = location.image;
@@ -40,6 +43,7 @@ function areWeAtImage(weAre){
 if(weAre){
 var location = locations[checkingLocationIndex];
 location.found = true;
+window.localStorage.setItem(stageId, JSON.stringify(locations));
 document.getElementById(location.id).style.borderColor = "lime";
 checkWin();
 document.getElementById("locationChecker").style.display = "none";

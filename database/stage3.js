@@ -1,4 +1,4 @@
-var locations = [
+var locationsNew = [
     {
       "id": "3-1",
       "found": false,
@@ -73,4 +73,11 @@ var locations = [
         "long": 3.576
       }
     }
-  ]
+  ];
+
+      var stageId = "locations3";
+      var locations = JSON.parse(window.localStorage.getItem(stageId));
+
+      if(!locations){
+          locations = locationsNew;
+      }

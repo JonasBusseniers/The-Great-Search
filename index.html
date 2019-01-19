@@ -28,7 +28,6 @@
 
 <script>
 
-
 document.getElementById("stoom").addEventListener("click",showStoom);
 
 function showStoom(){
@@ -43,6 +42,7 @@ atLocationWithRadius(51.056065, 3.740295, 0.0005, areWeAtDamp);
 
 function areWeAtDamp(weAre){
 if(weAre){
+window.localStorage.clear();
 document.getElementById("notAtDamp").style.display = "none";
 document.getElementById("atDamp").style.display = "block";
 } else {
