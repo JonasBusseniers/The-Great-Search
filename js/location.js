@@ -6,7 +6,7 @@ var atPosition;
 
 
 function atLocation(lat, long, nxtFunc){
- atLocationWithRadius(lat, long, 0.0002, nxtFunc);
+ atLocationWithRadius(lat, long, 0.0004, nxtFunc);
 
 }
 
@@ -16,9 +16,16 @@ function atLocationWithRadius(lat, long, rad, nxtFunc){
   radius = rad
   nextFunction = nxtFunc;
 document.getElementById("overlay").style.display = "block";
+var geo_options = {
+  enableHighAccuracy: true,
+  maximumAge        : 0,
+  timeout           : Infinity
+};
+navigator.geolocation.getCurrentPosition(checkPosition, geo_error, geo_options);
 
-navigator.geolocation.getCurrentPosition(checkPosition);
-
+}
+function geo_error() {
+  alert("Sorry, no position available.");
 }
 
 function checkPosition(position) {

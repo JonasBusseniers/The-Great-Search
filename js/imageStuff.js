@@ -48,9 +48,28 @@ document.getElementById(location.id).style.borderColor = "lime";
 checkWin();
 document.getElementById("locationChecker").style.display = "none";
 document.getElementById("overlayImage").src = "images/correct.jpg";
+
+checkOrder(checkingLocationIndex);
 } else{
 displayWrong();
 }
+}
+
+function checkOrder(x){
+ if(order){
+ for (i = 0; i < order.length; i++) {
+ var ref = order[i];
+ console.log(order[i]);
+  if(ref == x){
+break;
+  }
+ if(!locations[order[i]].found){
+ alert("Opgelet, je had voor deze foto al een andere foto gevonden moeten hebben!");
+ };
+
+ }
+
+ }
 }
 
 function displayWrong(){

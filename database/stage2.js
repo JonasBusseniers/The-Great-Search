@@ -81,3 +81,5 @@ var locationsNew = [
    if(!locations){
        locations = locationsNew;
    }
+
+var order = [3,0,7,1,5,2,6,8,4];

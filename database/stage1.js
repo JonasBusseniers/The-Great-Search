@@ -61,8 +61,8 @@ var locationsNew = [
       "found": false,
       "image":"images/stage1/8.jpg",
       "coords": {
-        "lat": 51.05535,
-        "long": 3.73779
+        "lat": 51.055146,
+        "long": 3.737960
       }
     },    {
       "id": "1-9",
@@ -81,4 +81,6 @@ var locations = JSON.parse(window.localStorage.getItem(stageId));
 if(!locations){
     locations = locationsNew;
 }
+
+var order = [2,5,7,1,6,8,0,3,4];
 
