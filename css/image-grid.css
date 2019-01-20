@@ -2,7 +2,10 @@
   display: grid;
   grid-template-columns: auto auto auto;
   width: 320px;
-  padding: 10px;
+  margin: 10px;
+   background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
 }
 .template{
 width:100px;

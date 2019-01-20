@@ -81,3 +81,6 @@ var locationsNew = [
       if(!locations){
           locations = locationsNew;
       }
+var bgImg = "url('images/stage3/fene.jpg')";
+
+var lastStage = true;

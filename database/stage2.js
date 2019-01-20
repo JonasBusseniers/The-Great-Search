@@ -83,3 +83,6 @@ var locationsNew = [
    }
 
 var order = [3,0,7,1,5,2,6,8,4];
+
+var bgImg = "url('images/stage2/30bd.jpg')";
+var lastStage = false;
