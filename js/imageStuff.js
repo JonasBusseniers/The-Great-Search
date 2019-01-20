@@ -3,6 +3,8 @@ window.onload = function () {
 var imageGrid =     document.getElementById("imageGrid")
 console.log(locations);
 
+
+
 for( i = 0; i < locations.length; i++){
 var location = locations[i];
 var divNode = document.createElement("div");
@@ -92,11 +94,12 @@ won = false;
 }
 }
 if(won){
-won()
+setTimeout('displayWon()',1000);
 }
 }
 
-function won(){
+function displayWon(){
+closeImageOverlay();
 document.getElementById("completedStage").style.display = "block";
 for(p = 0; p < 9; p++){
 command = "fadeLocations(" + (8-p).toString() + ")";
@@ -107,7 +110,6 @@ randomFw();
 setInterval(randomFw,2000);
 setInterval(slideShow,6000);
 }
-
 }
 
 function fadeLocations(o){
