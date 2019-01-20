@@ -17,7 +17,7 @@ imgNode.src = location.image;
 divNode.appendChild(imgNode);
 imageGrid.appendChild(divNode);
 }
-imageGrid.style.backgroundImage = bgImg;
+setTimeout(function(){ imageGrid.style.backgroundImage = bgImg; }, 2000);
 checkWin();
     }
 
@@ -44,6 +44,9 @@ atLocation(location.coords.lat,location.coords.long, areWeAtImage)
 function areWeAtImage(weAre){
 if(weAre){
 var location = locations[checkingLocationIndex];
+if(location.id == "2-4"){
+alert("Hint: het volgende kruispunt is niet ver!");
+}
 location.found = true;
 window.localStorage.setItem(stageId, JSON.stringify(locations));
 document.getElementById(location.id).style.borderColor = "lime";
