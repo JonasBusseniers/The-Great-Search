@@ -33,8 +33,6 @@ function checkPosition(position) {
 var lat = position.coords.latitude;
 var long = position.coords.longitude;
 
-console.log( lat + " long: " + long);
-
    if(lat > (latitude - radius) && lat < (latitude + radius) && long > (longitude - radius) && long < (longitude + radius)){
 atPosition = true;
 } else {

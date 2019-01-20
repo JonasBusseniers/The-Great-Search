@@ -1,9 +1,6 @@
 var checkingLocationIndex;
 window.onload = function () {
 var imageGrid =     document.getElementById("imageGrid")
-console.log(locations);
-
-
 
 for( i = 0; i < locations.length; i++){
 var location = locations[i];
@@ -67,7 +64,7 @@ function checkOrder(x){
  if(order){
  for (i = 0; i < order.length; i++) {
  var ref = order[i];
- console.log(order[i]);
+
   if(ref == x){
 break;
   }
