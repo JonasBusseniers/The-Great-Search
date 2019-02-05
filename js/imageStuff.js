@@ -98,9 +98,9 @@ setTimeout('displayWon()',1000);
 function displayWon(){
 closeImageOverlay();
 document.getElementById("completedStage").style.display = "block";
-for(p = 0; p < 9; p++){
-command = "fadeLocations(" + (8-p).toString() + ")";
-setTimeout(command,p * 300);
+for(p = 0; p < 11; p++){
+command = "fadeLocations(" + (10-p).toString() + ")";
+setTimeout(command,p * 500);
 }
 if(lastStage){
 randomFw();
