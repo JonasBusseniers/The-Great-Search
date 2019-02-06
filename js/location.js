@@ -2,38 +2,36 @@ var latitude;
 var longitude;
 var radius;
 var nextFunction;
-var atPosition;
+var lat;
+var long;
+var hasRecentPosition = false;
+var watchId;
+var mostRecentPos;
+var posWaiter;
 
 
-function atLocation(lat, long, nxtFunc){
- atLocationWithRadius(lat, long, 0.0004, nxtFunc);
+function atLocation(lati, longi, nxtFunc){
+ atLocationWithRadius(lati, longi, 0.0004, nxtFunc);
 
 }
 
-function atLocationWithRadius(lat, long, rad, nxtFunc){
-  latitude = lat;
-  longitude = long;
+function atLocationWithRadius(lati, longi, rad, nxtFunc){
+document.getElementById("overlay").style.display = "block";
+  latitude = lati;
+  longitude = longi;
   radius = rad
   nextFunction = nxtFunc;
-document.getElementById("overlay").style.display = "block";
-var geo_options = {
-  enableHighAccuracy: true,
-  maximumAge        : 0,
-  timeout           : Infinity
-};
-navigator.geolocation.getCurrentPosition(checkPosition, geo_error, geo_options);
-
+if(!hasRecentPosition){
+startPositionWatching();
 }
-function geo_error() {
-  alert("Sorry, no position available.");
+posWaiter = setInterval('waitForPosition()',1000);
 }
 
-function checkPosition(position) {
+function waitForPosition(){
+if(hasRecentPosition){
+var atPosition;
 
-var lat = position.coords.latitude;
-var long = position.coords.longitude;
-
-   if(lat > (latitude - radius) && lat < (latitude + radius) && long > (longitude - radius) && long < (longitude + radius)){
+if(lat > (latitude - radius) && lat < (latitude + radius) && long > (longitude - radius) && long < (longitude + radius)){
 atPosition = true;
 } else {
 atPosition = false
@@ -41,4 +39,39 @@ atPosition = false
  document.getElementById("overlay").style.display = "none";
 
 nextFunction(atPosition);
+clearInterval(posWaiter)
+}
+}
+
+
+
+
+
+function startPositionWatching(){
+navigator.geolocation.clearWatch(watchId);
+var geo_options = {
+  enableHighAccuracy: true,
+  maximumAge        : 0,
+  timeout           : Infinity
+};
+watchId = navigator.geolocation.watchPosition(storePosition, geo_error, geo_options);
+}
+
+function geo_error() {
+  alert("Sorry, no position available.");
+}
+
+function storePosition(position) {
+alert(position);
+var time = position.timestamp;
+lat = position.coords.latitude;
+long = position.coords.longitude;
+mostRecentPos = time;
+hasRecentPosition = true;
+setTimeout('positionExpired(' + time + ')', 5000);
+}
+
+function positionExpired(timestamp){
+ if(timestamp == mostRecentPos){
+hasRecentPosition = false;}
 }
