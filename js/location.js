@@ -19,7 +19,7 @@ function atLocationWithRadius(lati, longi, rad, nxtFunc){
 document.getElementById("overlay").style.display = "block";
   latitude = lati;
   longitude = longi;
-  radius = rad
+  radius = rad;
   nextFunction = nxtFunc;
 if(!hasRecentPosition){
 startPositionWatching();
@@ -44,11 +44,10 @@ clearInterval(posWaiter);
 }
 
 
-
-
-
 function startPositionWatching(){
+if(watchId != null){
 navigator.geolocation.clearWatch(watchId);
+}
 var geo_options = {
   enableHighAccuracy: true,
   maximumAge        : 0,
