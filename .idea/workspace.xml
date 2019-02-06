@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef4cc08-5c4a-42db-9cef-4668713258cb" name="Default" comment="improvement na test met Sandra deel 2">
+    <list default="true" id="fef4cc08-5c4a-42db-9cef-4668713258cb" name="Default" comment="Trying to improve location">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/location.js" afterDir="false" />
     </list>
@@ -29,10 +29,10 @@
         <counts>
           <entry key="css" value="199" />
           <entry key="html" value="4417" />
-          <entry key="js" value="2146" />
+          <entry key="js" value="2147" />
           <entry key="json" value="148" />
           <entry key="notas" value="141" />
-          <entry key="txt" value="304" />
+          <entry key="txt" value="330" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -40,8 +40,8 @@
           <entry key="CSS" value="199" />
           <entry key="HTML" value="4417" />
           <entry key="JSON" value="148" />
-          <entry key="JavaScript" value="2146" />
-          <entry key="PLAIN_TEXT" value="445" />
+          <entry key="JavaScript" value="2147" />
+          <entry key="PLAIN_TEXT" value="471" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/location.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+            <state relative-caret-position="157">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -274,7 +274,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549452209305" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549452615438" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -427,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549448538446</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Trying to improve location">
+      <created>1549452612779</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1549452612779</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -489,7 +496,8 @@
     <MESSAGE value="dt fout" />
     <MESSAGE value="improvement na test met Sandra" />
     <MESSAGE value="improvement na test met Sandra deel 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvement na test met Sandra deel 2" />
+    <MESSAGE value="Trying to improve location" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to improve location" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/phrase.rnc">
@@ -681,8 +689,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/location.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        <state relative-caret-position="157">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>

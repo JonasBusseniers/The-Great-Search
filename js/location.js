@@ -62,7 +62,6 @@ function geo_error() {
 }
 
 function storePosition(position) {
-alert(position);
 var time = position.timestamp;
 lat = position.coords.latitude;
 long = position.coords.longitude;
