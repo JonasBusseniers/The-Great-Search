@@ -34,12 +34,12 @@ var atPosition;
 if(lat > (latitude - radius) && lat < (latitude + radius) && long > (longitude - radius) && long < (longitude + radius)){
 atPosition = true;
 } else {
-atPosition = false
+atPosition = false;
 }
  document.getElementById("overlay").style.display = "none";
 
 nextFunction(atPosition);
-clearInterval(posWaiter)
+clearInterval(posWaiter);
 }
 }
 
